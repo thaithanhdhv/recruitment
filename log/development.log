@@ -10007,7 +10007,6 @@ Processing by StaticPagesController#contact as HTML
   Rendered shared/_backTop.html.erb (15.7ms)
 Completed 200 OK in 1086ms (Views: 1057.6ms | ActiveRecord: 0.0ms)
 
-
 Started GET "/" for ::1 at 2019-05-28 21:35:46 +0700
   [1m[35m (7.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ /Users/tamtran/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
@@ -53021,3 +53020,1091 @@ Processing by Admins::HomeController#index as HTML
 Completed 200 OK in 89ms (Views: 81.1ms | ActiveRecord: 1.9ms)
 
 
+<<<<<<< HEAD
+=======
+Started GET "/" for ::1 at 2019-05-29 19:26:01 +0700
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (27.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (63.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('3109152644088164520', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (11.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to DeviseCreateAdmins (20190529060436)
+  [1m[35m (59.0ms)[0m  [1m[35mCREATE TABLE `admins` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `avatar` varchar(255), `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190529060436_devise_create_admins.rb:5
+  [1m[35m (25.5ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_email`  ON `admins` (`email`) [0m
+  ↳ db/migrate/20190529060436_devise_create_admins.rb:41
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_admins_on_reset_password_token`  ON `admins` (`reset_password_token`) [0m
+  ↳ db/migrate/20190529060436_devise_create_admins.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190529060436')[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-05-29 12:26:24', '2019-05-29 12:26:24')[0m
+  ↳ bin/rails:4
+  [1m[35m (22.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('3109152644088164520')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2019-05-29 19:26:33 +0700
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_slider.html.erb (0.3ms)
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_pagetitle.html.erb (0.2ms)
+  Rendered shared/_pagetitle.html.erb (0.0ms)
+  Rendered static_pages/_message.html.erb (7095.6ms)
+  Rendered shared/_pagetitle.html.erb (0.0ms)
+  Rendered shared/_post.html.erb (1.2ms)
+  Rendered shared/_post.html.erb (0.2ms)
+  Rendered shared/_post.html.erb (0.2ms)
+  Rendered shared/_contact_form.html.erb (0.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (7107.6ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+  Rendered shared/_backTop.html.erb (0.5ms)
+Completed 200 OK in 7305ms (Views: 7300.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/sign-in" for ::1 at 2019-05-29 19:26:56 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/sign-in"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/sign_in(" for ::1 at 2019-05-29 19:27:07 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/admins/sign_in("):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admins/sign_in" for ::1 at 2019-05-29 19:27:11 +0700
+Processing by Admins::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/free_page
+  Rendered devise/sessions/new.html.erb within layouts/free_page (192.4ms)
+Completed 200 OK in 433ms (Views: 370.2ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 19:33:30 +0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_slider.html.erb (0.4ms)
+  Rendered shared/_banner.html.erb (0.9ms)
+  Rendered shared/_pagetitle.html.erb (0.4ms)
+  Rendered shared/_pagetitle.html.erb (0.1ms)
+  Rendered static_pages/_message.html.erb (6.7ms)
+  Rendered shared/_pagetitle.html.erb (0.0ms)
+  Rendered shared/_post.html.erb (1.2ms)
+  Rendered shared/_post.html.erb (0.6ms)
+  Rendered shared/_post.html.erb (0.3ms)
+  Rendered shared/_contact_form.html.erb (0.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (34.0ms)
+  Rendered layouts/_header.html.erb (7.0ms)
+  Rendered layouts/_footer.html.erb (3.3ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 217ms (Views: 207.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 19:34:44 +0700
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_slider.html.erb (0.5ms)
+  Rendered shared/_banner.html.erb (0.6ms)
+  Rendered shared/_pagetitle.html.erb (0.4ms)
+  Rendered shared/_pagetitle.html.erb (0.1ms)
+  Rendered static_pages/_message.html.erb (6982.0ms)
+  Rendered shared/_pagetitle.html.erb (0.0ms)
+  Rendered shared/_post.html.erb (2.1ms)
+  Rendered shared/_post.html.erb (0.3ms)
+  Rendered shared/_post.html.erb (0.2ms)
+  Rendered shared/_contact_form.html.erb (0.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (7013.4ms)
+  Rendered layouts/_header.html.erb (11.2ms)
+  Rendered layouts/_footer.html.erb (4.4ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 7325ms (Views: 7320.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post-details" for ::1 at 2019-05-29 19:36:00 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/post-details"):
+  
+actionpack (5.2.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
+Started GET "/" for ::1 at 2019-05-28 19:54:59 +0700
+  [1m[35m (53.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_slider.html.erb (0.2ms)
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_pagetitle.html.erb (0.3ms)
+  Rendered shared/_pagetitle.html.erb (0.1ms)
+  Rendered static_pages/_message.html.erb (5571.4ms)
+  Rendered shared/_pagetitle.html.erb (0.0ms)
+  Rendered shared/_post.html.erb (1.2ms)
+  Rendered shared/_post.html.erb (0.2ms)
+  Rendered shared/_post.html.erb (0.4ms)
+  Rendered shared/_contact_form.html.erb (0.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (5606.6ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (4.1ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 5730ms (Views: 5724.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2019-05-28 19:57:13 +0700
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered shared/_contact_form.html.erb (0.5ms)
+  Rendered static_pages/contact.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_header.html.erb (15.2ms)
+  Rendered layouts/_footer.html.erb (18.4ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 175ms (Views: 171.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-28 19:57:24 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_slider.html.erb (0.3ms)
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_pagetitle.html.erb (0.3ms)
+  Rendered shared/_pagetitle.html.erb (0.1ms)
+  Rendered static_pages/_message.html.erb (21.9ms)
+  Rendered shared/_pagetitle.html.erb (0.0ms)
+  Rendered shared/_post.html.erb (7.8ms)
+  Rendered shared/_post.html.erb (0.4ms)
+  Rendered shared/_post.html.erb (0.3ms)
+  Rendered shared/_contact_form.html.erb (0.4ms)
+  Rendered static_pages/home.html.erb within layouts/application (63.8ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 114ms (Views: 112.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for ::1 at 2019-05-28 20:32:40 +0700
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (29.7ms)
+  Rendered layouts/_footer.html.erb (17.2ms)
+  Rendered shared/_backTop.html.erb (0.5ms)
+Completed 200 OK in 4811ms (Views: 4809.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:32:55 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (3.2ms)
+  Rendered posts/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (3.5ms)
+  Rendered shared/_backTop.html.erb (0.6ms)
+Completed 200 OK in 147ms (Views: 141.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:36:02 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_header.html.erb (18.6ms)
+  Rendered layouts/_footer.html.erb (9.0ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 145.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:41:31 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:10: syntax error, unexpected ':', expecting =>
+...nt-post", locals: { post-title: 'お問い合わせ', post-d...
+...                              ^
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:10: syntax error, unexpected ',', expecting ')'
+...st-title: 'お問い合わせ', post-date: '2019/01/01' } );...
+...                              ^
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:10: syntax error, unexpected ':', expecting ')'
+...お問い合わせ', post-date: '2019/01/01' } );@output_buf...
+...                              ^
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:10: syntax error, unexpected '}', expecting ')'
+...せ', post-date: '2019/01/01' } );@output_buffer.safe_append...
+...                              ^
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/show.html.erb:10: syntax error, unexpected ':', expecting =>
+app/views/posts/show.html.erb:10: syntax error, unexpected ',', expecting ')'
+app/views/posts/show.html.erb:10: syntax error, unexpected ':', expecting ')'
+app/views/posts/show.html.erb:10: syntax error, unexpected '}', expecting ')'
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/show.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:41:50 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:10: syntax error, unexpected ':', expecting =>
+...nt-post", locals: { post-title: 'お問い合わせ'} );@out...
+...                              ^
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:10: syntax error, unexpected '}', expecting ')'
+...st-title: 'お問い合わせ'} );@output_buffer.safe_append...
+...                              ^
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/show.html.erb:10: syntax error, unexpected ':', expecting =>
+app/views/posts/show.html.erb:10: syntax error, unexpected '}', expecting ')'
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/show.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:42:32 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:10: syntax error, unexpected ':', expecting =>
+...t-posts", locals: { post-title: 'お問い合わせ' } );@ou...
+...                              ^
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:10: syntax error, unexpected '}', expecting ')'
+...t-title: 'お問い合わせ' } );@output_buffer.safe_append...
+...                              ^
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/junokyo/Desktop/recruitment/app/views/posts/show.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/show.html.erb:10: syntax error, unexpected ':', expecting =>
+app/views/posts/show.html.erb:10: syntax error, unexpected '}', expecting ')'
+app/views/posts/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/posts/show.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:43:12 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (20.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial posts/_recent-posts, application/_recent-posts with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/Users/junokyo/Desktop/recruitment/app/views"
+  * "/Users/junokyo/.rvm/gems/ruby-2.5.1/gems/kaminari-core-1.1.1/app/views"
+  * "/Users/junokyo/.rvm/gems/ruby-2.5.1/gems/devise-4.6.2/app/views"
+):
+     7:         </div>
+     8:         <div class="gf-righ-sidebar col-md-3">
+     9:             <div class="recent-posts">
+    10:                     <%= render partial: "recent-posts", locals: { title: 'お問い合わせ' } %>
+    11:             </div>
+    12:         </div>
+    13:     </div>
+  
+app/views/posts/show.html.erb:10:in `_app_views_posts_show_html_erb___1375865208877692840_70140482444880'
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:43:59 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (636.1ms)
+  Rendered posts/show.html.erb within layouts/application (639.7ms)
+Completed 500 Internal Server Error in 646ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `date' for #<#<Class:0x00007f95ac4f0c10>:0x00007f95b71d4170>):
+    1: <div class="recent-post">
+    2:     <h5><%= title %></h5>
+    3:     <span><%= date %></span>
+    4: </div>
+  
+app/views/posts/_recent_posts.html.erb:3:in `_app_views_posts__recent_posts_html_erb__3658568992553285241_70140499327260'
+app/views/posts/show.html.erb:10:in `_app_views_posts_show_html_erb___1375865208877692840_70140499505260'
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:44:13 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (22.9ms)
+  Rendered layouts/_footer.html.erb (13.4ms)
+  Rendered shared/_backTop.html.erb (0.6ms)
+Completed 200 OK in 154ms (Views: 152.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:50:44 +0700
+  [1m[35m (5.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_header.html.erb (18.7ms)
+  Rendered layouts/_footer.html.erb (8.7ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 4320ms (Views: 4313.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:53:21 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.6ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_header.html.erb (18.6ms)
+  Rendered layouts/_footer.html.erb (17.8ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 4485ms (Views: 4466.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:54:20 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (20.9ms)
+  Rendered layouts/_header.html.erb (19.6ms)
+  Rendered layouts/_footer.html.erb (19.5ms)
+  Rendered shared/_backTop.html.erb (0.5ms)
+Completed 200 OK in 4318ms (Views: 4301.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:56:00 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (8.8ms)
+  Rendered posts/show.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_header.html.erb (28.0ms)
+  Rendered layouts/_footer.html.erb (12.7ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 298ms (Views: 286.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:57:36 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (8.9ms)
+  Rendered posts/show.html.erb within layouts/application (20.6ms)
+  Rendered layouts/_header.html.erb (21.0ms)
+  Rendered layouts/_footer.html.erb (17.6ms)
+  Rendered shared/_backTop.html.erb (0.6ms)
+Completed 200 OK in 4278ms (Views: 4259.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:58:04 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.4ms)
+  Rendered posts/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (16.6ms)
+  Rendered layouts/_footer.html.erb (5.0ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 3985ms (Views: 3982.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:58:40 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.8ms)
+  Rendered posts/_recent_posts.html.erb (8.9ms)
+  Rendered posts/show.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_header.html.erb (21.6ms)
+  Rendered layouts/_footer.html.erb (18.9ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 4001ms (Views: 3985.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:59:08 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (2.6ms)
+  Rendered shared/_backTop.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 20:59:38 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (3.4ms)
+  Rendered shared/_backTop.html.erb (0.5ms)
+Completed 200 OK in 3961ms (Views: 3959.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2019-05-28 21:00:00 +0700
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered shared/_contact_form.html.erb (0.5ms)
+  Rendered static_pages/contact.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header.html.erb (26.4ms)
+  Rendered layouts/_footer.html.erb (9.2ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 199ms (Views: 178.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:00:37 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.8ms)
+  Rendered posts/_recent_posts.html.erb (36.2ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/_recent_posts.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (61.1ms)
+  Rendered layouts/_header.html.erb (29.3ms)
+  Rendered layouts/_footer.html.erb (15.6ms)
+  Rendered shared/_backTop.html.erb (0.6ms)
+Completed 200 OK in 5401ms (Views: 5385.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:01:23 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.6ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (7.0ms)
+  Rendered layouts/_footer.html.erb (6.0ms)
+  Rendered shared/_backTop.html.erb (0.6ms)
+Completed 200 OK in 4208ms (Views: 4206.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:01:56 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.5ms)
+  Rendered posts/_recent_posts.html.erb (2.4ms)
+  Rendered posts/_recent_posts.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+  Rendered shared/_backTop.html.erb (0.2ms)
+Completed 200 OK in 3723ms (Views: 3720.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:04:59 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.3ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (6.9ms)
+  Rendered shared/_backTop.html.erb (0.8ms)
+Completed 200 OK in 3700ms (Views: 3698.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:05:39 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+  Rendered shared/_backTop.html.erb (0.9ms)
+Completed 200 OK in 4393ms (Views: 4391.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:09:45 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.4ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 4152ms (Views: 4150.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:10:04 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.4ms)
+  Rendered posts/_recent_posts.html.erb (0.8ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.6ms)
+  Rendered posts/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (3.2ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:10:09 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (1.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (4.0ms)
+  Rendered layouts/_footer.html.erb (2.5ms)
+  Rendered shared/_backTop.html.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:11:20 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.4ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_footer.html.erb (5.7ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 4502ms (Views: 4500.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:11:48 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (2.7ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 4229ms (Views: 4227.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:12:45 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.5ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.7ms)
+  Rendered posts/show.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (5.1ms)
+  Rendered shared/_backTop.html.erb (0.6ms)
+Completed 200 OK in 4430ms (Views: 4428.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:13:34 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.4ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (2.8ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 4144ms (Views: 4142.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:14:51 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.4ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (2.3ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 3916ms (Views: 3914.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:15:31 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for ::1 at 2019-05-28 21:15:46 +0700
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered shared/_contact_form.html.erb (1.0ms)
+  Rendered static_pages/contact.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_header.html.erb (19.1ms)
+  Rendered layouts/_footer.html.erb (16.4ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 222ms (Views: 203.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:20:27 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.5ms)
+  Rendered posts/_recent_posts.html.erb (67.8ms)
+  Rendered posts/_recent_posts.html.erb (0.6ms)
+  Rendered posts/_recent_posts.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (87.1ms)
+  Rendered layouts/_header.html.erb (22.0ms)
+  Rendered layouts/_footer.html.erb (22.4ms)
+  Rendered shared/_backTop.html.erb (0.6ms)
+Completed 200 OK in 4663ms (Views: 4650.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:20:53 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.4ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (21.4ms)
+  Rendered layouts/_footer.html.erb (14.7ms)
+  Rendered shared/_backTop.html.erb (0.7ms)
+Completed 200 OK in 3823ms (Views: 3821.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:22:42 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+  Rendered shared/_backTop.html.erb (1.2ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:22:54 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.5ms)
+  Rendered posts/_recent_posts.html.erb (2.1ms)
+  Rendered posts/_recent_posts.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (3.7ms)
+  Rendered shared/_backTop.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:26:43 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (3.9ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 96ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:30:14 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (1.0ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (7.2ms)
+  Rendered layouts/_footer.html.erb (1.8ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:35:46 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.5ms)
+  Rendered posts/_recent_posts.html.erb (34.2ms)
+  Rendered posts/_recent_posts.html.erb (0.7ms)
+  Rendered posts/_recent_posts.html.erb (0.7ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (130.8ms)
+  Rendered layouts/_header.html.erb (19.2ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 491ms (Views: 476.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:40:34 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (34.3ms)
+  Rendered posts/_recent_posts.html.erb (0.7ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (115.7ms)
+  Rendered layouts/_header.html.erb (18.7ms)
+  Rendered layouts/_footer.html.erb (15.3ms)
+  Rendered shared/_backTop.html.erb (0.5ms)
+Completed 200 OK in 4716ms (Views: 4705.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:41:04 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (8.8ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.4ms)
+  Rendered posts/show.html.erb within layouts/application (32.9ms)
+  Rendered layouts/_header.html.erb (18.4ms)
+  Rendered layouts/_footer.html.erb (5.4ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 4456ms (Views: 4447.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:41:48 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (8.6ms)
+  Rendered posts/_recent_posts.html.erb (1.0ms)
+  Rendered posts/_recent_posts.html.erb (1.5ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 5661ms (Views: 5655.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:43:10 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.8ms)
+  Rendered posts/_recent_posts.html.erb (34.1ms)
+  Rendered posts/_recent_posts.html.erb (0.6ms)
+  Rendered posts/_recent_posts.html.erb (0.4ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (136.3ms)
+  Rendered layouts/_header.html.erb (19.1ms)
+  Rendered layouts/_footer.html.erb (4.7ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 5772ms (Views: 5745.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:44:00 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (9.1ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (41.0ms)
+  Rendered layouts/_header.html.erb (21.4ms)
+  Rendered layouts/_footer.html.erb (5.7ms)
+  Rendered shared/_backTop.html.erb (0.6ms)
+Completed 200 OK in 4624ms (Views: 4604.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:45:14 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.8ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (1.7ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 3955ms (Views: 3953.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:46:27 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.9ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+  Rendered shared/_backTop.html.erb (0.2ms)
+Completed 200 OK in 4304ms (Views: 4302.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:46:56 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (1.1ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/show.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (1.9ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 4363ms (Views: 4362.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:48:02 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (2.0ms)
+  Rendered posts/_recent_posts.html.erb (0.6ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.5ms)
+  Rendered posts/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (2.1ms)
+  Rendered shared/_backTop.html.erb (0.3ms)
+Completed 200 OK in 4511ms (Views: 4509.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog-detail" for ::1 at 2019-05-28 21:49:34 +0700
+Processing by PostsController#show as HTML
+  Rendering posts/show.html.erb within layouts/application
+  Rendered shared/_page_header.html.erb (0.9ms)
+  Rendered posts/_recent_posts.html.erb (1.4ms)
+  Rendered posts/_recent_posts.html.erb (0.3ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/_recent_posts.html.erb (0.2ms)
+  Rendered posts/show.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (1.8ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 4018ms (Views: 4002.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-29 19:24:22 +0700
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/junokyo/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered layouts/_slider.html.erb (0.4ms)
+  Rendered shared/_banner.html.erb (1.6ms)
+  Rendered shared/_pagetitle.html.erb (0.5ms)
+  Rendered shared/_pagetitle.html.erb (0.1ms)
+  Rendered static_pages/_message.html.erb (1491.2ms)
+  Rendered shared/_pagetitle.html.erb (0.0ms)
+  Rendered shared/_post.html.erb (1.4ms)
+  Rendered shared/_post.html.erb (0.3ms)
+  Rendered shared/_post.html.erb (0.2ms)
+  Rendered shared/_contact_form.html.erb (0.3ms)
+  Rendered static_pages/home.html.erb within layouts/application (1526.1ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (2.9ms)
+  Rendered shared/_backTop.html.erb (0.4ms)
+Completed 200 OK in 1665ms (Views: 1651.8ms | ActiveRecord: 0.0ms)

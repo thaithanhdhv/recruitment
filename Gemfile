@@ -23,8 +23,6 @@ gem "carrierwave-base64"
 gem 'turbolinks'
 gem "bootstrap", '~>4.0.0'
 gem 'jquery-rails'
-# gem 'font-awesome-sass', '~> 5.8.1'
-gem 'font_awesome5_rails'
 gem "mini_racer"
 
 group :development, :test do

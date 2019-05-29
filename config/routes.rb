@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   namespace :admins do
     resources :home, only: :index
   end
+  get "/blog", to: "posts#index"
+  get "/blog-detail", to: "posts#show"
 end
