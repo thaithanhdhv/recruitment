@@ -41,21 +41,49 @@ header {
 
             position: relative;
             .sub-menu {
-                max-height: 0;
-                transition: max-height 0.3s ease-out;
+                transition: all .5s ease-out;
                 overflow: hidden;
-                background: #d5d5d5;
+                background: #fff;
                 position: absolute;
                 z-index: 9999;
-                right: 50%;
-                transform: translateX(50%);
+                animation-name: fadeOutDown;
+                animation-duration: .5s;
                 font-size: 15px;
+                border-bottom: 2px solid $theme-color;
+                visibility: hidden;
+                opacity: 0;
+                box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.15);
+
+                .dropdown-item {
+                    white-space: nowrap;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    transition: all .3s;
+                }
+            }
+
+            .sub-menu:not(.language) {
+                min-width: 210px;
+                text-align: center;
+
+                .dropdown-item {
+                    line-height: 38px;
+
+                    &:hover {
+                        margin-left: 5px;
+                        color: $theme-color;
+                    }
+                }
             }
 
             &:hover {
                 .sub-menu {
-                    max-height: 500px;
-                    transition: max-height 0.35s ease-in;
+                    animation-name: fadeInUp;
+                    transition: all .5s ease-in;
+                    visibility: visible;
+                    animation-duration: .5s;
+                    opacity: 1;
+                    animation-fill-mode: both;
                 }
             }
 

@@ -2,7 +2,9 @@
 <div class="topbar">
     <div class="container topbar-wrapper d-flex">
         <div class="logo">
-            <%= image_tag("logo.png", :alt => "homepage") %>
+            <%= link_to(root_path) do %>
+                <%= image_tag("logo.png", :alt => "homepage") %>
+            <% end %>
         </div>
         <div class="information">
             <div>
@@ -13,10 +15,9 @@
                     </a>
             </div>
             <div>
-                <button class="button">ログイン</button>
-                <button class="button">サインアップ</button>
+                <%= link_to "お問い合わせ", contact_path, class: "button" %>
             </div>
-            
+
         </div>
     </div>
 </div>
@@ -36,7 +37,7 @@
                 <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
-            </div>  
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">事業内容</a>
@@ -53,7 +54,7 @@
               <a class="nav-link dropdown-toggle" href="services.html">
                   <%= image_tag("jp.png", :alt => "homepage") %>
               </a>
-              <div class="sub-menu">
+              <div class="sub-menu language">
                   <a class="dropdown-item" href="portfolio-1-col.html">
                       <%= image_tag("jp.png", :alt => "homepage") %>
                       Vietnamese
@@ -66,7 +67,7 @@
                       <%= image_tag("gb.png", :alt => "homepage") %>
                       日本語
                   </a>
-              </div>  
+              </div>
           </li>
         </ul>
       </div>

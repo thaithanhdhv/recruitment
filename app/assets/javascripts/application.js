@@ -25,7 +25,7 @@
 
 
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
     AOS.init({
         disable: false,
         startEvent: 'DOMContentLoaded',
@@ -55,6 +55,5 @@ $(document).ready(function(){
     });
     $('#scroll').click(function(){
         $("html, body").animate({ scrollTop: 0 }, 600);
-        return false;
     });
 });
